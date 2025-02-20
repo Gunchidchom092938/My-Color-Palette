@@ -1,4 +1,5 @@
 import Favicon from "../favicon.ico";
+import { MessageProvider } from "../../context/MessageContext";
 
 export const metadata = {
     title: "Color Mixer",
@@ -7,5 +8,9 @@ export const metadata = {
 };
 
 export default async function LocaleLayout({ children }) {
-    return <div>{children}</div>;
+    return (
+        <div>
+            <MessageProvider>{children}</MessageProvider>
+        </div>
+    );
 }
